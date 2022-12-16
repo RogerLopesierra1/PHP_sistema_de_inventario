@@ -49,7 +49,7 @@ if ($check_user->rowCount()==1) {
 
     $_SESSION['id'] = $check_user['usuario_id'];
     $_SESSION['nombre'] = $check_user['usuario_nombre'];
-    $_SESSION['apellido'] = $check_user['usuarioapellidod'];
+    $_SESSION['apellido'] = $check_user['usuario_apellido'];
     $_SESSION['usuario'] = $check_user['usuario_usuario'];
 
     if (headers_sent()) {

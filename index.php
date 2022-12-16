@@ -16,11 +16,12 @@
 
 		if (is_file("./vistas/" . $_GET['vista'] . ".php") && $_GET['vista'] != "login" && $_GET['vista'] != "404") {
 
-			/*== Cerrar sesion ==*/
-			/* if ((!isset($_SESSION['id']) || $_SESSION['id'] == "") || (!isset($_SESSION['usuario']) || $_SESSION['usuario'] == "")) {
+			/* == Cerrar sesion == */
+			if ((!isset($_SESSION['id']) || $_SESSION['id'] == "") ||
+				(!isset($_SESSION['usuario']) || $_SESSION['usuario'] == "")) {
 				include "./vistas/logout.php";
 				exit();
-			} */
+			}
 
 			include "./inc/navbar.php";
 
