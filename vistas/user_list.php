@@ -19,7 +19,7 @@
 
     $pagina = limpiar_cadena($pagina);
     $url = "index.php?vista=user_list&page=";
-    $registros = 6;
+    $registros = 5;
     $busqueda = "";
 
     require_once("./php/usuario_lista.php");

@@ -34,18 +34,18 @@ $Npaginas = ceil($total / $registros);
 
 $tabla .= '
   <div class="table-container">
-  <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
-    <thead>
-      <tr class="has-text-centered">
-        <th>#</th>
-        <th>Nombres</th>
-        <th>Apellidos</th>
-        <th>Usuario</th>
-        <th>Email</th>
-        <th colspan="2">Opciones</th>
-      </tr>
-    </thead>
-    <tbody>
+    <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
+      <thead>
+        <tr class="has-text-centered">
+          <th>#</th>
+          <th>Nombres</th>
+          <th>Apellidos</th>
+          <th>Usuario</th>
+          <th>Email</th>
+          <th colspan="2">Opciones</th>
+        </tr>
+      </thead>
+      <tbody>
 ';
 
 if ($total>=1 and $pagina<=$Npaginas) {
@@ -99,7 +99,7 @@ if ($total>=1 and $pagina<=$Npaginas) {
 
 $tabla .= '</tbody></table></div>';
 
-if ($total>+1 and $pagina<=$Npaginas) {
+if ($total>=1 and $pagina<=$Npaginas) {
   $tabla .= '
   <p class="has-text-right">Mostrando usuarios <strong>'.$pag_inicio.'</strong>
   al <strong>'.$pag_final.'</strong> de un <strong>total de '.$total.'</strong></p>
@@ -109,7 +109,7 @@ if ($total>+1 and $pagina<=$Npaginas) {
 $conexion = null;
 echo ($tabla);
 
-if ($total>+1 and $pagina<=$Npaginas) {
+if ($total>=1 and $pagina<=$Npaginas) {
   echo(paginador_tablas($pagina,$Npaginas,$url,7));
 }
 
