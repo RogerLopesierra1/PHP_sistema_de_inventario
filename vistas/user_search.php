@@ -32,14 +32,14 @@
     </div>
   </div>
 
-  <?php }else{ ?>
+  <?php } else{ ?>
 
   <div class="columns">
     <div class="column">
       <form class="has-text-centered mt-6 mb-6" action="" method="POST" autocomplete="off">
         <input type="hidden" name="modulo_buscador" value="usuario">
         <input type="hidden" name="eliminar_buscador" value="usuario">
-        <p>Estas buscando <strong>“<?php $_SESSION['busqueda_usuario']; ?>”</strong></p>
+        <p>Estas buscando <strong>“<?php echo($_SESSION['busqueda_usuario']); ?>”</strong></p>
         <br>
         <button type="submit" class="button is-danger is-rounded">Eliminar busqueda</button>
       </form>
@@ -58,11 +58,11 @@
     }
 
     $pagina = limpiar_cadena($pagina);
-    $url = "index.php?vista=user_list&page=";
+    $url = "index.php?vista=user_search&page=";
     $registros = 5;
     $busqueda = $_SESSION['busqueda_usuario'];
 
-    require_once("./php/usuario_search.php");
+    require_once("./php/usuario_lista.php");
     } 
   ?>
 </div>

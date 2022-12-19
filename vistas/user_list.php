@@ -22,6 +22,7 @@
     $registros = 5;
     $busqueda = "";
 
+    # pafinador de usuario
     require_once("./php/usuario_lista.php");
   ?> 
   
